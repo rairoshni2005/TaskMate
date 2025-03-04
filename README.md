@@ -80,7 +80,7 @@ python app.py
 ---
 
 ## 👨‍💻 **Contributors**  
-- **Your Name** Roshni Rai  
+- **Name** Roshni Rai  
 
 Feel free to **contribute, suggest improvements, or report issues**! 🎯  
 
