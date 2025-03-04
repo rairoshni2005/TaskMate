@@ -80,7 +80,7 @@ python app.py
 ---
 
 ## 👨‍💻 **Contributors**  
-- **Your Name** ([@your-github](https://github.com/your-username))  
+- **Your Name** Roshni Rai  
 
 Feel free to **contribute, suggest improvements, or report issues**! 🎯  
 
