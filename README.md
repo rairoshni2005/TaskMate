@@ -36,7 +36,7 @@ cd taskmate
 
 ### 2️⃣ **Run Backend (Python Server)**  
 ```bash
-python app.py
+python3 app.py
 ```
 
 ### 3️⃣ **Open the App**  
