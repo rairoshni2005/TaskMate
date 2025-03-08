@@ -1,4 +1,3 @@
-Sure! Below is the entire content in a copy-paste-friendly format with the appropriate sections for the `README.md` file and the `LICENSE` file included:
 
 ---
 
@@ -179,31 +178,3 @@ SOFTWARE.
 ```
 
 ---
-
-### **Steps to Update Your Repository**
-
-```bash
-# Replace the README.md content with the new one.
-# Add the LICENSE file content.
-
-# Now commit and push the changes to your GitHub repository.
-git add README.md LICENSE
-git commit -m "Updated README and added LICENSE file"
-git push origin main
-```
-
----
-
-### **Final Result**
-
-- Your repository will now have a professional `README.md` file.
-- The `LICENSE` file will make your project open-source under the MIT License.
-- Contributors and users will have clear instructions on how to use and contribute to your project.
-
----
-
-Let me know if you need further assistance! 😊
-
----
-
-Feel free to copy and paste the above code into your project files as needed!
