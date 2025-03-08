@@ -35,30 +35,21 @@ TaskMate is a simple yet powerful task management application that helps users t
 ## 🚀 Installation & Setup
 
 ### 1️⃣ Clone the Repository
-
-
 git clone https://github.com/RoshniRai7/taskmate.git
 cd taskmate
 
 
 ### 2️⃣ Install Dependencies
-
 Make sure you have Python 3.x installed. Then, install the required Python packages:
-
-
 pip install -r requirements.txt
 
 
 ### 3️⃣ Run the Backend (Flask Server)
-
 Start the Flask server:
-
-
-python app.py
+python3 app.py
 
 
 ### 4️⃣ Open the App
-
 Open `index.html` in your browser, or navigate to `http://127.0.0.1:5000`.
 
 ---
@@ -90,7 +81,6 @@ Open `index.html` in your browser, or navigate to `http://127.0.0.1:5000`.
 
 ## 📂 Project Structure
 
-
 TaskMate/
 ├── static/
 │   ├── css/
@@ -103,7 +93,6 @@ TaskMate/
 ├── database.db              # SQLite database file
 ├── README.md                # Documentation
 └── requirements.txt         # Python dependencies
-
 
 ---
 
@@ -151,7 +140,6 @@ Enjoy using*TaskMate! 🚀
 ---
 
 ### MIT License (`LICENSE`)
-
 
 MIT License
 
