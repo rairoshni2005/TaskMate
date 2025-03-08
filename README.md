@@ -1,92 +1,128 @@
-### 📌 **TaskMate - Advanced To-Do App**  
+# 📌 TaskMate - Advanced To-Do App
 
-TaskMate is a simple yet powerful **task management application** that helps users **track, organize, and complete** their tasks efficiently. With features like **weekly recurring tasks, reminders, and prioritization**, TaskMate ensures you never miss a deadline!  
-
----
-
-## 🔥 **Features**  
-
-✅ **Add, Edit, Delete Tasks**  
-✅ **Mark Tasks as Completed/Pending**  
-✅ **Weekly Recurring Tasks**  
-✅ **Reminder Notifications**  
-✅ **Task Prioritization (High/Medium/Low)**  
-✅ **Filter & Sort Tasks**  
-✅ **Dark Mode (Optional Enhancement)**  
-✅ **LocalStorage/Database Persistence**  
+TaskMate is a **simple yet powerful task management application** that helps users **track, organize, and complete** their tasks efficiently. With features like **weekly recurring tasks, reminders, and prioritization**, TaskMate ensures you never miss a deadline!
 
 ---
 
-## 🛠 **Tech Stack**  
+## 🔥 Features
 
-- **Frontend**: HTML, CSS, JavaScript (Vanilla JS)  
-- **Backend**: Python (Flask or Simple HTTP Server)  
-- **Database**: JSON or SQLite  
-- **Notifications**: JavaScript alerts or Python email reminders  
+- **✅ Add, Edit, Delete Tasks**: Easily manage your tasks with intuitive controls.
+- **✅ Mark Tasks as Completed/Pending**: Keep track of your progress.
+- **✅ Weekly Recurring Tasks**: Automatically recreate tasks every week.
+- **✅ Reminder Notifications**: Get notified before a task is due.
+- **✅ Task Prioritization (High/Medium/Low)**: Organize tasks by priority.
+- **✅ Filter & Sort Tasks**: Filter by priority or sort by due date.
+- **✅ Dark Mode**: Switch between light and dark themes for better readability.
+- **✅ LocalStorage/Database Persistence**: Tasks are saved and persist across sessions.
 
 ---
 
-## 🚀 **Installation & Setup**  
+## 🛠 Tech Stack
 
-### 1️⃣ **Clone the Repository**  
+- **Frontend**: HTML, CSS, JavaScript (Vanilla JS)
+- **Backend**: Python (Flask)
+- **Database**: SQLite
+- **Notifications**: JavaScript alerts
+
+---
+
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone the Repository
+
 ```bash
-git clone https://github.com/your-username/taskmate.git
+git clone https://github.com/RoshniRai7/taskmate.git
 cd taskmate
-```
 
-### 2️⃣ **Run Backend (Python Server)**  
-```bash
-python3 app.py
-```
+2️⃣ Install Dependencies
+Make sure you have Python 3.x installed. Then, install the required Python packages:
 
-### 3️⃣ **Open the App**  
-- Open `index.html` in your browser  
+bash
+Copy
+pip install -r requirements.txt
+3️⃣ Run the Backend (Flask Server)
+Start the Flask server:
 
----
+bash
+Copy
+python app.py
+4️⃣ Open the App
+Open index.html in your browser, or navigate to http://127.0.0.1:5000.
 
-## 🎯 **Usage**  
 
-1. **Add a new task** by entering a name, due date, priority, and (optionally) enabling weekly repetition.  
-2. **Tasks appear in a list**, where you can edit, delete, or mark them as completed.  
-3. **Tasks with "Repeat Weekly" enabled** will automatically reappear every 7 days.  
-4. **Reminders will trigger notifications** before the due time.  
-5. **Filter & sort tasks** based on priority, date, or completion status.  
+🎯 Usage
+Add a New Task:
 
----
+Enter a task name, due date, priority, and optionally enable weekly repetition.
 
-## 📂 **Project Structure**  
+Click "Add Task" to save it.
 
-```
-📂 TaskMate
- ┣ 📂 static
- ┃ ┣ 📜 styles.css    # Styling
- ┃ ┣ 📜 script.js     # Frontend logic
- ┣ 📂 templates
- ┃ ┣ 📜 index.html    # UI
- ┣ 📜 app.py          # Backend logic (Python)
- ┣ 📜 tasks.json      # Task storage (JSON)
- ┣ 📜 README.md       # Documentation
- ┣ 📜 requirements.txt # Python dependencies
-```
+Manage Tasks:
 
----
+Mark tasks as completed or pending.
 
-## 🛠 **Future Enhancements**  
-🚀 Drag & Drop Task Sorting  
-🚀 User Authentication (Login/Signup)  
-🚀 Cloud Sync for Task Storage  
-🚀 Mobile App Version  
+Edit or delete tasks as needed.
 
----
+Recurring Tasks:
 
-## 👨‍💻 **Contributors**  
-- **Name** Roshni Rai  
+Tasks with "Repeat Weekly" enabled will automatically reappear every 7 days.
 
-Feel free to **contribute, suggest improvements, or report issues**! 🎯  
+Reminders:
 
----
+Get browser notifications for tasks due within the next hour.
 
-## 📜 **License**  
-This project is licensed under the **MIT License**.  
+Filter & Sort:
 
----
+Filter tasks by priority (High, Medium, Low).
+
+Sort tasks by due date or priority.
+
+Dark Mode:
+
+Toggle between light and dark themes using the "Dark Mode" button.
+
+📂 Project Structure
+Copy
+TaskMate/
+├── static/
+│   ├── css/
+│   │   └── styles.css       # CSS for styling the app
+│   └── js/
+│       └── script.js        # JavaScript for frontend logic
+├── templates/
+│   └── index.html           # Main HTML file for the app
+├── app.py                   # Flask backend (Python)
+├── database.db              # SQLite database file
+├── README.md                # Documentation
+└── requirements.txt         # Python dependencies
+🛠 Future Enhancements
+🚀 Drag & Drop Task Sorting: Reorder tasks using drag-and-drop.
+
+🚀 User Authentication: Add login/signup functionality.
+
+🚀 Cloud Sync: Sync tasks across devices using cloud storage.
+
+🚀 Mobile App Version: Build a mobile app for TaskMate.
+
+👨‍💻 Contributors
+Roshni Rai - GitHub Profile
+
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+🙌 Contributing
+Contributions are welcome! If you'd like to contribute, please:
+
+Fork the repository.
+
+Create a new branch (git checkout -b feature/YourFeatureName).
+
+Commit your changes (git commit -m 'Add some feature').
+
+Push to the branch (git push origin feature/YourFeatureName).
+
+Open a pull request.
+
+❓ Support
+If you encounter any issues or have questions, feel free to open an issue.
+
