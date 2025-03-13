@@ -1,0 +1,316 @@
+/* ==================== */
+/* Global Styles        */
+/* ==================== */
+
+:root {
+    /* Light Mode Variables */
+    --bg-color: #f0f4f8; /* Soft light blue background */
+    --text-color: #333333; /* Dark gray text */
+    --container-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white container */
+    --input-bg: rgba(255, 255, 255, 0.8); /* Light input background */
+    --input-border: rgba(0, 0, 0, 0.1); /* Light input border */
+    --button-bg: #ffd700; /* Gold button background */
+    --button-hover: #e6c300; /* Darker gold on hover */
+    --task-bg: rgba(255, 255, 255, 0.9); /* Light task background */
+    --task-border: rgba(0, 0, 0, 0.1); /* Light task border */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow */
+    --glow-color: rgba(255, 215, 0, 0.6); /* Glow effect color */
+  }
+  
+  [data-theme="dark"] {
+    /* Dark Mode Variables */
+    --bg-color: #121212; /* Dark background */
+    --text-color: #ffffff; /* Light text */
+    --container-bg: rgba(0, 0, 0, 0.2); /* Semi-transparent black container */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Dark input background */
+    --input-border: rgba(255, 255, 255, 0.2); /* Dark input border */
+    --button-bg: #ffd700; /* Gold button background */
+    --button-hover: #e6c300; /* Darker gold on hover */
+    --task-bg: rgba(255, 255, 255, 0.1); /* Dark task background */
+    --task-border: rgba(255, 255, 255, 0.2); /* Dark task border */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Dark shadow */
+    --glow-color: rgba(255, 215, 0, 0.8); /* Glow effect color */
+  }
+  
+  /* ==================== */
+  /* Body and Container   */
+  /* ==================== */
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color); /* Dynamic background color */
+    color: var(--text-color); /* Dynamic text color */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 50%;
+    max-width: 600px;
+    background: var(--container-bg); /* Dynamic container background */
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px); /* Blur effect for container */
+    box-shadow: 0px 10px 25px var(--shadow-color), 0px 0px 15px var(--glow-color); /* Glow effect */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative; /* For absolute positioning of the toggle button */
+  }
+  
+  .container:hover {
+    box-shadow: 0px 12px 30px var(--shadow-color), 0px 0px 20px var(--glow-color); /* Stronger glow on hover */
+  }
+  
+  /* ==================== */
+  /* Typography           */
+  /* ==================== */
+  
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #ffd700; /* Gold color for heading */
+    letter-spacing: 1px;
+    text-shadow: 0px 2px 4px var(--shadow-color); /* Text shadow for depth */
+  }
+  
+  /* ==================== */
+  /* Form and Inputs      */
+  /* ==================== */
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  input, select, button {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input, select {
+    background: var(--input-bg); /* Dynamic input background */
+    color: var(--text-color); /* Dynamic text color */
+    text-align: center;
+    border: 1px solid var(--input-border); /* Dynamic input border */
+  }
+  
+  input::placeholder {
+    color: rgba(0, 0, 0, 0.6); /* Placeholder text color */
+  }
+  
+  input:focus, select:focus {
+    background: var(--input-bg); /* Dynamic input background on focus */
+    box-shadow: 0px 5px 10px var(--shadow-color); /* Shadow on focus */
+    border-color: #ffd700; /* Gold border on focus */
+  }
+  
+  button {
+    background: var(--button-bg); /* Dynamic button background */
+    color: #222; /* Button text color */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px var(--shadow-color); /* Button shadow */
+  }
+  
+  button:hover {
+    background: var(--button-hover); /* Dynamic button hover background */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  /* ==================== */
+  /* Filters              */
+  /* ==================== */
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  
+  .filters button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: var(--input-bg); /* Dynamic filter button background */
+    color: var(--text-color); /* Dynamic filter button text color */
+    border: 1px solid var(--input-border); /* Dynamic filter button border */
+    transition: all 0.3s ease;
+  }
+  
+  .filters button:hover {
+    background: var(--container-bg); /* Dynamic filter button hover background */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  /* ==================== */
+  /* Task List            */
+  /* ==================== */
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background: var(--task-bg); /* Dynamic task background */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px var(--shadow-color); /* Task shadow */
+    border-left: 4px solid #ffd700; /* Gold border on the left */
+  }
+  
+  li:hover {
+    background: var(--container-bg); /* Dynamic task hover background */
+  }
+  
+  .task-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .task-buttons button {
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .complete {
+    background: #28a745; /* Green background for complete button */
+  }
+  
+  .complete:hover {
+    background: #218838; /* Darker green on hover */
+  }
+  
+  .delete {
+    background: #dc3545; /* Red background for delete button */
+  }
+  
+  .delete:hover {
+    background: #c82333; /* Darker red on hover */
+  }
+  
+  /* ==================== */
+  /* Dark Mode Overrides  */
+  /* ==================== */
+  
+  body[data-theme="dark"] {
+    background: var(--bg-color); /* Dark background */
+    color: var(--text-color); /* Light text */
+  }
+  
+  body[data-theme="dark"] .container {
+    background: var(--container-bg); /* Dark container background */
+    border: 1px solid var(--input-border); /* Dark container border */
+  }
+  
+  body[data-theme="dark"] input,
+  body[data-theme="dark"] select {
+    background: var(--input-bg); /* Dark input background */
+    color: var(--text-color); /* Light text */
+    border: 1px solid var(--input-border); /* Dark input border */
+  }
+  
+  body[data-theme="dark"] input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Light placeholder text */
+  }
+  
+  body[data-theme="dark"] .filters button {
+    background: var(--input-bg); /* Dark filter button background */
+    color: var(--text-color); /* Light text */
+    border: 1px solid var(--input-border); /* Dark filter button border */
+  }
+  
+  body[data-theme="dark"] .filters button:hover {
+    background: var(--container-bg); /* Dark filter button hover background */
+  }
+  
+  body[data-theme="dark"] li {
+    background: var(--task-bg); /* Dark task background */
+    border-left: 4px solid #ffd700; /* Gold border on the left */
+  }
+  
+  body[data-theme="dark"] li:hover {
+    background: var(--container-bg); /* Dark task hover background */
+  }
+  
+  /* ==================== */
+  /* Theme Toggle Button  */
+  /* ==================== */
+  
+  #theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: var(--button-bg); /* Dynamic button background */
+    color: #222; /* Button text color */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px var(--shadow-color); /* Button shadow */
+    border: none;
+    outline: none;
+  }
+  
+  #theme-toggle:hover {
+    background: var(--button-hover); /* Dynamic button hover background */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  /* ==================== */
+  /* Responsive Design    */
+  /* ==================== */
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    input, select, button {
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    .filters button {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  
+    li span {
+      font-size: 14px;
+    }
+  
+    .task-buttons button {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }

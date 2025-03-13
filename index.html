@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMate - Advanced To-Do App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <button id="theme-toggle">Toggle Dark Mode</button>
+    <h1>TaskMate</h1>
+    <form id="task-form">
+      <input type="text" id="task-name" placeholder="Task Name" required>
+      <input type="datetime-local" id="task-due" required>
+      <select id="task-priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <label>
+        <input type="checkbox" id="task-repeat"> Repeat Weekly
+      </label>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="filters">
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('High')">High Priority</button>
+      <button onclick="filterTasks('Medium')">Medium Priority</button>
+      <button onclick="filterTasks('Low')">Low Priority</button>
+      <button onclick="sortTasks('date')">Sort by Date</button>
+      <button onclick="sortTasks('priority')">Sort by Priority</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
