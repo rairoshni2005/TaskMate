@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ### 3️⃣ Run the Backend (Flask Server)  
 Start the Flask server:  
 ```
-python app.py  
+python3 app.py  
 ```
 
 ### 4️⃣ Open the App  
