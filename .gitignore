@@ -4,3 +4,5 @@
 node_modules/
 database.db
 *.log
+database.db
+.DS_Store
